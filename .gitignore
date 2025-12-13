@@ -1,0 +1,12 @@
+
+config.json
+.env
+flask-agent/.env
+.venv/
+__pycache__/
+*.pyc
+flask-agent/__pycache__/
+flask-agent/conversation_state_dev.json
+flask-agent/static/generated/
+flask-agent/.env
+.env
