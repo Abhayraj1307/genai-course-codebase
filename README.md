@@ -1,28 +1,18 @@
-# Installation
-1. Create a pytohn env:
-```python -m venv .venv/env_name```
-2. Install requirements:
-```pip install -r requirements.txt```
-3. Add keys to config file:
-```json
-{
-    "chatbot": {
-        "GOOGLE_API_KEY": "",
-        "OPENAI_API_KEY":""
-    }
-}
-```
-4. Activate env:
-```source .venv/env-name/bin/activate```
-```& .venv\env-name\Scripts\activate```
-# Run flask-chatbot
-execute 
-```python flask-chatbot/app.py```
+# Generative AI Course Codebase
 
-# RAG Tool
-* **Qdrant Server:**
-1. Create your local storage for qdrant, e.g "/home/username/qdrant_data"
-2. Run the server ```podman run -p 6333:6333 -v /home/username/qdrant_data:/qdrant/storage docker.io/qdrant/qdrant```.
-* **Indexing:**
-1. Go to ```bot/rag_indexing```
-2. run ```python indexing.py [url]```. For our example, url by ```https://lilianweng.github.io/posts/2023-06-23-agent/```
+Coursework and experiments with Flask chat interfaces, agent patterns, and retrieval-augmented generation (RAG). The folders capture learning exercises and examples.
+
+- [Flask chatbot](flask-chatbot/)
+- [Flask agent](flask-agent/)
+- [RAG notes](rag.md)
+
+## Run the chatbot locally
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python flask-chatbot/app.py
+```
+
+Configure the provider settings locally before making model requests. The RAG examples use Qdrant; see the [retrieval notes](rag.md) for indexing details. Keep provider keys out of version control.
